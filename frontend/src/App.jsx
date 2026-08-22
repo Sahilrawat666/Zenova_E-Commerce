@@ -16,6 +16,7 @@ import Checkout from "../pages/Checkout.jsx";
 import OrderConfirmation from "../pages/OrderConfirmation.jsx";
 import Orders from "../pages/Orders.jsx";
 import Account from "../pages/Account.jsx";
+import ForgotPassword from "../pages/ForgotPassword.jsx";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             path="/order-confirmation/:orderId"
             element={<OrderConfirmation />}
           />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/orders" element={<Orders />} />
           {/* Protected routes */}
           <Route element={<ProtectedRoute />}>
