@@ -17,6 +17,7 @@ import OrderConfirmation from "../pages/OrderConfirmation.jsx";
 import Orders from "../pages/Orders.jsx";
 import Account from "../pages/Account.jsx";
 import ForgotPassword from "../pages/ForgotPassword.jsx";
+import ResetPassword from "../pages/ResetPassword.jsx";
 
 function App() {
   return (
@@ -39,8 +40,9 @@ function App() {
             path="/order-confirmation/:orderId"
             element={<OrderConfirmation />}
           />
-          <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/orders" element={<Orders />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password/:token" element={<ResetPassword />} />
           {/* Protected routes */}
           <Route element={<ProtectedRoute />}>
             <Route path="/account" element={<Account />} />
