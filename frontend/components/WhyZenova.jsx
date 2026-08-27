@@ -24,7 +24,7 @@ const benefits = [
 
 function WhyZenova() {
   return (
-    <section className="bg-white px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
+    <section className="bg-white px-5 py-7 sm:px-8 lg:px-10 lg:py-12">
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -13,7 +13,7 @@ function FeaturedProducts() {
     .slice(0, 4);
 
   return (
-    <section className="bg-[#f7f3ee] px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
+    <section className="bg-[#f7f3ee] px-5 py-7 sm:px-8 lg:px-10 lg:py-12">
       <div className="mx-auto max-w-7xl">
         {/* Section Header */}
         <motion.div

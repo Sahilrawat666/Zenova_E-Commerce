@@ -41,7 +41,7 @@ function Shop() {
   return (
     <main className="min-h-screen bg-[#f8f5f0]">
       {/* Header */}
-      <section className="border-b border-[#ddd5cc] px-6 py-7 md:px-10 lg:px-16">
+      <section className="border-b border-[#ddd5cc] px-6 sm:px-8 lg:px-10 lg:py-12">
         <div className="mx-auto max-w-7xl">
           <p className="text-xs uppercase tracking-[0.3em] text-[#b08d57]">
             Zenova Collection

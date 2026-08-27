@@ -3,7 +3,7 @@ import { FiArrowRight } from "react-icons/fi";
 
 function PromoBanner() {
   return (
-    <section className="bg-[#241c18] px-5 py-16 sm:px-8 lg:px-10 lg:py-20">
+    <section className="bg-[#241c18] px-5 py-7 sm:px-8 lg:px-10 lg:py-12">
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, scale: 0.97 }}
