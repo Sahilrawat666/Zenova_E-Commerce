@@ -19,6 +19,13 @@ const navLinks = [
   { label: "Collections", href: "/collections" },
   { label: "About", href: "/about" },
 ];
+const MobileNavLinks = [
+  { label: "Home", href: "/" },
+  { label: "Shop", href: "/shop" },
+  { label: "Collections", href: "/collections" },
+  { label: "My Orders", href: "/orders" },
+  { label: "About", href: "/about" },
+];
 
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -254,7 +261,6 @@ function Navbar() {
       </div>
 
       {/* Search Panel */}
-      {/* Search Panel */}
       <AnimatePresence>
         {searchOpen && (
           <motion.div
@@ -313,7 +319,7 @@ function Navbar() {
           >
             <nav className="mx-auto max-w-7xl px-5 py-5 sm:px-8">
               <div className="flex flex-col">
-                {navLinks.map((link, index) => (
+                {MobileNavLinks.map((link, index) => (
                   <motion.a
                     key={link.label}
                     href={link.href}

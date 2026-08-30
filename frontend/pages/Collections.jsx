@@ -54,7 +54,7 @@ function Collections() {
   return (
     <main className="min-h-screen bg-[#f7f3ee]">
       {/* Hero */}
-      <section className="px-6 pb-16 pt-16 md:px-10 md:pb-20 md:pt-20 lg:px-16">
+      <section className="px-6 sm:px-8 lg:px-10 py-4 lg:py-12 ">
         <div className="mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -36,7 +36,7 @@ function About() {
   ];
 
   return (
-    <section className="overflow-hidden bg-[#f7f3ee] py-20 sm:py-24 lg:py-32">
+    <section className="overflow-hidden bg-[#f7f3ee] py-5 sm:py-8 lg:py-10">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         {/* Intro */}
         <motion.div
@@ -167,7 +167,7 @@ function About() {
         </div>
 
         {/* Values */}
-        <div className="mt-24 border-t border-[#e5ddd4] pt-16 sm:mt-32 sm:pt-20">
+        <div className="mt-24 border-t border-[#e5ddd4] pt-7 sm:mt-20 sm:pt-12">
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
             {values.map((value, index) => (
               <motion.div
