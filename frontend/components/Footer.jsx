@@ -51,11 +51,11 @@ function Footer() {
             </p>
 
             <a
-              href="mailto:hello@Zenova.com"
+              href="mailto:zenova@Zenova.com"
               className="mt-6 inline-flex items-center gap-2 text-sm text-[#d8b77d] transition-colors hover:text-white"
             >
               <FiMail size={16} />
-              hello@Zenova.com
+              zenova@Zenova.com
             </a>
 
             <div className="mt-7 flex gap-2">
