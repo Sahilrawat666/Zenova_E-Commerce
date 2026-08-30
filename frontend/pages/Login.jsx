@@ -176,7 +176,7 @@ function Login() {
             className="w-full max-w-md"
           >
             {/* Mobile logo */}
-            <div className="mb-10 lg:hidden">
+            <div className="sm:mb-3 lg:hidden">
               <Link
                 to="/"
                 className="text-2xl font-medium tracking-[0.18em] text-[#211b18]"
@@ -186,7 +186,7 @@ function Login() {
             </div>
 
             {/* Heading */}
-            <div className="mb-8">
+            <div className=" mb-4 sm:mb-8">
               <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.3em] text-[#b08d57]">
                 Welcome back
               </p>
@@ -215,14 +215,14 @@ function Login() {
             <button
               type="button"
               onClick={() => handleGoogleLogin()}
-              className="group flex w-full items-center justify-center gap-3 rounded-xl border border-[#ddd5cc] bg-white px-5 py-3.5 text-sm font-medium text-[#302923] transition-all duration-300 hover:border-[#b08d57] hover:shadow-md cursor-pointer"
+              className="group flex w-full items-center justify-center gap-3 rounded-xl border border-[#ddd5cc] bg-white px-5 py-2.5 sm:py-3.5 text-sm font-medium text-[#302923] transition-all duration-300 hover:border-[#b08d57] hover:shadow-md cursor-pointer"
             >
               <FcGoogle size={20} />
               <span>Continue with Google</span>
             </button>
 
             {/* Divider */}
-            <div className="my-7 flex items-center gap-4">
+            <div className="my-4 sm:my-6 flex items-center gap-4">
               <div className="h-px flex-1 bg-[#ded6ce]" />
 
               <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-[#a49b92]">
@@ -258,7 +258,7 @@ function Login() {
                     placeholder="you@example.com"
                     autoComplete="email"
                     required
-                    className="w-full rounded-xl border border-[#ddd5cc] bg-white py-3.5 pl-11 pr-4 text-sm text-[#211b18] outline-none transition-all placeholder:text-[#aaa098] focus:border-[#b08d57] focus:ring-4 focus:ring-[#b08d57]/10"
+                    className="w-full rounded-xl border border-[#ddd5cc] bg-white py-2.5 sm:py-3.5 pl-11 pr-4 text-sm text-[#211b18] outline-none transition-all placeholder:text-[#aaa098] focus:border-[#b08d57] focus:ring-4 focus:ring-[#b08d57]/10"
                   />
                 </div>
               </div>
@@ -296,7 +296,7 @@ function Login() {
                     placeholder="Enter your password"
                     autoComplete="current-password"
                     required
-                    className="w-full rounded-xl border border-[#ddd5cc] bg-white py-3.5 pl-11 pr-12 text-sm text-[#211b18] outline-none transition-all placeholder:text-[#aaa098] focus:border-[#b08d57] focus:ring-4 focus:ring-[#b08d57]/10"
+                    className="w-full rounded-xl border border-[#ddd5cc] bg-white py-2.5 sm:py-3.5 pl-11 pr-12 text-sm text-[#211b18] outline-none transition-all placeholder:text-[#aaa098] focus:border-[#b08d57] focus:ring-4 focus:ring-[#b08d57]/10"
                   />
 
                   <button
@@ -320,7 +320,7 @@ function Login() {
               <button
                 type="submit"
                 disabled={loading}
-                className="group relative mt-2 w-full cursor-pointer overflow-hidden rounded-xl bg-[#211b18] px-5 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#b08d57] hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60"
+                className="group relative mt-2 w-full cursor-pointer overflow-hidden rounded-xl bg-[#211b18] px-5 py-2.5 sm:py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#b08d57] hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60"
               >
                 <span className="relative z-10">
                   {loading ? "Signing in..." : "Sign in"}
