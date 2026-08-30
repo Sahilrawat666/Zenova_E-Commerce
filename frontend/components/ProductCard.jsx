@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { FiHeart, FiShoppingBag, FiStar } from "react-icons/fi";
 import { Link } from "react-router-dom";
@@ -25,6 +26,7 @@ function ProductCard({ product }) {
             src={product.image_url}
             alt={product.name}
             loading="lazy"
+            decoding="async"
             className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           />
         </Link>
@@ -97,4 +99,4 @@ function ProductCard({ product }) {
   );
 }
 
-export default ProductCard;
+export default React.memo(ProductCard);
