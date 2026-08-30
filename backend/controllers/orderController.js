@@ -63,7 +63,6 @@ export const createOrder = async (req, res) => {
         const cartItems = cartResult.rows;
 
         // Validate stock and calculate total on the server
-        // Validate stock and calculate total on the server
         let totalAmount = 0;
 
         for (const item of cartItems) {

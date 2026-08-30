@@ -47,3 +47,55 @@ CREATE TABLE cart_items (
 
     UNIQUE(user_id, product_id)
 );
+
+-- orders table
+CREATE TABLE IF NOT EXISTS orders (
+    id SERIAL PRIMARY KEY,
+
+    user_id INTEGER NOT NULL
+        REFERENCES users(id)
+        ON DELETE CASCADE,
+
+    subtotal_amount DECIMAL(10, 2) NOT NULL
+        CHECK (subtotal_amount >= 0),
+
+    shipping_amount DECIMAL(10, 2) NOT NULL DEFAULT 0
+        CHECK (shipping_amount >= 0),
+
+    total_amount DECIMAL(10, 2) NOT NULL
+        CHECK (total_amount >= 0),
+
+    status VARCHAR(30) NOT NULL DEFAULT 'pending',
+
+    shipping_name VARCHAR(100) NOT NULL,
+    shipping_email VARCHAR(255) NOT NULL,
+    shipping_phone VARCHAR(20) NOT NULL,
+    shipping_address TEXT NOT NULL,
+    city VARCHAR(100) NOT NULL,
+    state VARCHAR(100) NOT NULL,
+    postal_code VARCHAR(20) NOT NULL,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- order_items table
+CREATE TABLE IF NOT EXISTS order_items (
+    id SERIAL PRIMARY KEY,
+
+    order_id INTEGER NOT NULL
+        REFERENCES orders(id)
+        ON DELETE CASCADE,
+
+    product_id INTEGER NOT NULL
+        REFERENCES products(id)
+        ON DELETE RESTRICT,
+
+    quantity INTEGER NOT NULL
+        CHECK (quantity > 0),
+
+    price DECIMAL(10, 2) NOT NULL
+        CHECK (price >= 0),
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
