@@ -13,8 +13,8 @@ function Hero() {
           className="relative z-10 max-w-xl"
         >
           {/* Eyebrow */}
-          <div className="mb-6 flex items-center gap-3">
-            <span className="h-px w-10 bg-[#b08d57]" />
+          <div className="mb-4 sm:mb-6 flex items-center gap-3">
+            {/* <span className="h-px w-10 bg-[#b08d57]" /> */}
 
             <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#b08d57]">
               The New Collection
@@ -22,7 +22,7 @@ function Hero() {
           </div>
 
           {/* Heading */}
-          <h1 className="text-5xl font-semibold leading-[1.05] tracking-[-0.035em] text-[#241c18] sm:text-6xl lg:text-7xl">
+          <h1 className="text-4xl font-semibold leading-[1.05] tracking-[-0.035em] text-[#241c18] sm:text-6xl lg:text-7xl">
             Timeless
             <span className="block font-normal italic text-[#b08d57]">
               elegance.
@@ -30,7 +30,7 @@ function Hero() {
           </h1>
 
           {/* Description */}
-          <p className="mt-7 max-w-lg text-base leading-7 text-[#786f68] sm:text-lg">
+          <p className="mt-4 sm:mt-7 max-w-lg text-base leading-7 text-[#786f68] sm:text-lg">
             Discover thoughtfully designed essentials created for modern living.
             Refined materials, timeless silhouettes, and effortless
             sophistication.
@@ -59,7 +59,7 @@ function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="mt-12 flex items-center gap-8 border-t border-[#e5ddd4] pt-7">
+          <div className="mt-8  md:mt-12 flex items-center gap-8 border-t border-[#e5ddd4] pt-7">
             <div>
               <p className="text-2xl font-semibold text-[#241c18]">10K+</p>
               <p className="mt-1 text-xs uppercase tracking-wider text-[#786f68]">

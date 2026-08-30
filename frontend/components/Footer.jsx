@@ -37,8 +37,8 @@ function Footer() {
 
   return (
     <footer className="bg-[#241c18] text-white">
-      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10 lg:py-20">
-        <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
+      <div className="mx-auto max-w-7xl px-5 py-5 sm:px-8 lg:px-10 lg:py-7">
+        <div className="grid gap-8 sm:grid-cols-[1.5fr_1fr_1fr_1fr]">
           {/* Brand */}
           <div>
             <a href="/" className="text-2xl font-semibold tracking-[0.25em]">
@@ -92,7 +92,7 @@ function Footer() {
                 {title}
               </h3>
 
-              <ul className="mt-5 space-y-3">
+              <ul className=" mt-2 space-y-1 md:space-y-3">
                 {links.map((link) => (
                   <li key={link.label}>
                     <a
@@ -108,7 +108,7 @@ function Footer() {
           ))}
         </div>
 
-        <div className="mt-14 flex flex-col justify-between gap-5 border-t border-white/10 pt-7 sm:flex-row sm:items-center">
+        <div className=" mt-4 md:mt-8 flex flex-col justify-between gap-1 md:gap-5 border-t border-white/10 pt-3 sm:mt-7 sm:flex-row sm:items-center">
           <p className="text-xs text-[#8f837a]">
             © 2026 ZENOVA. All rights reserved.
           </p>
