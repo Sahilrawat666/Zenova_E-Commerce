@@ -105,7 +105,10 @@ function Cart() {
                           <button
                             type="button"
                             onClick={() =>
-                              updateQuantity(product.id, product.quantity - 1)
+                              updateQuantity(
+                                product.product_id,
+                                product.quantity - 1,
+                              )
                             }
                             className="flex h-9 w-9 items-center justify-center cursor-pointer text-[#786f68] transition-colors hover:text-[#b08d57]"
                             aria-label="Decrease quantity"
@@ -120,7 +123,10 @@ function Cart() {
                           <button
                             type="button"
                             onClick={() =>
-                              updateQuantity(product.id, product.quantity + 1)
+                              updateQuantity(
+                                product.product_id,
+                                product.quantity + 1,
+                              )
                             }
                             className="flex h-9 w-9 items-center justify-center cursor-pointer text-[#786f68] transition-colors hover:text-[#b08d57]"
                             aria-label="Increase quantity"
@@ -132,7 +138,7 @@ function Cart() {
                         {/* Remove */}
                         <button
                           type="button"
-                          onClick={() => removeFromCart(product.id)}
+                          onClick={() => removeFromCart(product.product_id)}
                           className="flex items-center cursor-pointer gap-2 text-xs text-[#81776e] transition-colors hover:text-red-600"
                         >
                           <FiTrash2 size={15} />

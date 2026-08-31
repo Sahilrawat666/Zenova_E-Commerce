@@ -42,7 +42,6 @@ export const getCart = async (req, res) => {
 };
 
 // POST /api/cart/:productId
-// POST /api/cart/:productId
 export const addToCart = async (req, res) => {
     try {
         const { productId } = req.params;

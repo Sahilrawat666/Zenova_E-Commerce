@@ -83,6 +83,8 @@ function CartProvider({ children }) {
       );
 
       const data = await response.json();
+      console.log(response);
+      console.log(quantity);
 
       if (!response.ok) {
         throw new Error(data.message || "Failed to add product to cart.");
