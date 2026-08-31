@@ -42,9 +42,19 @@ export const getCart = async (req, res) => {
 };
 
 // POST /api/cart/:productId
+// POST /api/cart/:productId
 export const addToCart = async (req, res) => {
     try {
         const { productId } = req.params;
+        const { quantity = 1 } = req.body;
+
+        // Validate quantity
+        if (!Number.isInteger(quantity) || quantity < 1) {
+            return res.status(400).json({
+                success: false,
+                message: "Quantity must be a positive integer.",
+            });
+        }
 
         // Check product
         const productResult = await pool.query(
@@ -83,7 +93,7 @@ export const addToCart = async (req, res) => {
         );
 
         if (existingItem.rows.length > 0) {
-            const newQuantity = existingItem.rows[0].quantity + 1;
+            const newQuantity = existingItem.rows[0].quantity + quantity;
 
             if (newQuantity > product.stock) {
                 return res.status(400).json({
@@ -111,13 +121,20 @@ export const addToCart = async (req, res) => {
         }
 
         // Add new cart item
+        if (quantity > product.stock) {
+            return res.status(400).json({
+                success: false,
+                message: "Requested quantity exceeds available stock.",
+            });
+        }
+
         const result = await pool.query(
             `
       INSERT INTO cart_items (user_id, product_id, quantity)
-      VALUES ($1, $2, 1)
+      VALUES ($1, $2, $3)
       RETURNING *
       `,
-            [req.user.id, productId],
+            [req.user.id, productId, quantity],
         );
 
         return res.status(201).json({

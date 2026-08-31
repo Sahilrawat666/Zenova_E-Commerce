@@ -54,7 +54,7 @@ function Collections() {
   return (
     <main className="min-h-screen bg-[#f7f3ee]">
       {/* Hero */}
-      <section className="px-6 sm:px-8 lg:px-10 py-4 lg:py-12 ">
+      <section className="px-6 sm:px-8 lg:px-10 py-2 lg:py-4 ">
         <div className="mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -66,11 +66,11 @@ function Collections() {
               Explore Zenova
             </p>
 
-            <h1 className="mt-4 text-4xl font-light tracking-tight text-[#241c18] sm:text-5xl md:text-6xl">
+            <h1 className="mt-4 text-3xl font-light tracking-tight text-[#241c18] sm:text-5xl md:text-4xl">
               Collections
             </h1>
 
-            <p className="mt-6 max-w-xl text-sm leading-7 text-[#786f68] md:text-base">
+            <p className="mt-2 md:mt-5 max-w-xl text-sm leading-7 text-[#786f68] md:text-base">
               Explore our carefully curated collections, designed to bring
               timeless style and modern elegance to your wardrobe.
             </p>
@@ -88,7 +88,7 @@ function Collections() {
               </p>
             </div>
           ) : (
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
               {collections.map((collection, index) => (
                 <motion.div
                   key={collection.name}
@@ -117,17 +117,17 @@ function Collections() {
                       <div className="absolute inset-0 bg-gradient-to-t from-[#241c18]/75 via-[#241c18]/10 to-transparent opacity-90" />
 
                       {/* Content */}
-                      <div className="absolute bottom-0 left-0 right-0 p-6">
+                      <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-3 md:p-5">
                         <p className="text-xs uppercase tracking-[0.2em] text-[#e1c99f]">
                           {collection.count}{" "}
                           {collection.count === 1 ? "Product" : "Products"}
                         </p>
 
-                        <h2 className="mt-2 text-2xl font-light text-white">
+                        <h2 className="md:mt-2 text-xl md:text-2xl font-light text-white">
                           {collection.name}
                         </h2>
 
-                        <div className="mt-4 flex items-center gap-2 text-sm text-white/90">
+                        <div className="md:mt-4 flex items-center gap-2 text-sm text-white/90">
                           <span>Explore Collection</span>
 
                           <FiArrowRight

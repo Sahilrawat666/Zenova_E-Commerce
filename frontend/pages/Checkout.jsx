@@ -113,7 +113,7 @@ function Checkout() {
   return (
     <main className="min-h-screen bg-[#f8f5f0]">
       {/* Header */}
-      <section className="border-b border-[#ddd5cc] px-6 py-12 md:px-10 lg:px-16">
+      <section className="border-b border-[#ddd5cc] px-6 py-5 md:py-8 md:px-10 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <Link
             to="/cart"
@@ -127,13 +127,13 @@ function Checkout() {
             Secure Checkout
           </p>
 
-          <h1 className="mt-3 text-4xl font-light tracking-tight text-[#302923] md:text-5xl">
+          <h1 className="mt-3 text-3xl font-light tracking-tight text-[#302923] md:text-4xl">
             Checkout
           </h1>
         </div>
       </section>
 
-      <section className="px-6 py-12 md:px-10 lg:px-16">
+      <section className="px-6 py-5 md:py-8 md:px-10 lg:px-16">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_380px]">
           {/* Form */}
           <form onSubmit={handleSubmit}>

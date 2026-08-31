@@ -63,7 +63,7 @@ function CartProvider({ children }) {
   }, [authLoading, isAuthenticated, fetchCart]);
 
   // Add product to cart
-  const addToCart = async (product) => {
+  const addToCart = async (product, quantity = 1) => {
     if (!token) {
       toast.error("Please login to add items to your cart.");
       return;
@@ -76,7 +76,9 @@ function CartProvider({ children }) {
           method: "POST",
           headers: {
             Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
           },
+          body: JSON.stringify({ quantity }),
         },
       );
 

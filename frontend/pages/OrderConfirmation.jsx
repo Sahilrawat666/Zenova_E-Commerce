@@ -105,7 +105,7 @@ function OrderConfirmation() {
             Order Confirmed
           </p>
 
-          <h1 className="mt-3 text-4xl font-light tracking-tight text-[#302923] md:text-5xl">
+          <h1 className="mt-3 text-3xl font-light tracking-tight text-[#302923] md:text-4xl">
             Thank you for your order
           </h1>
 

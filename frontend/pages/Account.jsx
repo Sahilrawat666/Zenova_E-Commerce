@@ -67,7 +67,7 @@ function Account() {
   return (
     <main className="min-h-screen bg-[#f8f5f0]">
       {/* Header */}
-      <section className="border-b border-[#ddd5cc] px-6 sm:px-8 lg:px-10 py-4 lg:py-12">
+      <section className="border-b border-[#ddd5cc] px-6 sm:px-8 lg:px-10 py-2 lg:py-4">
         <div className="mx-auto max-w-7xl">
           <p className="text-xs uppercase tracking-[0.3em] text-[#b08d57]">
             Account
@@ -83,7 +83,7 @@ function Account() {
         </div>
       </section>
 
-      <section className="px-6 py-12 md:px-10 lg:px-16">
+      <section className="px-6 py-5 md:py-8 md:px-10 lg:px-16">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[320px_1fr]">
           {/* Profile */}
           <aside className="h-fit border border-[#ddd5cc] bg-white p-6 sm:p-8">

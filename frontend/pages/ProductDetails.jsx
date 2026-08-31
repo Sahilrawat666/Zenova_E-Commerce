@@ -233,7 +233,7 @@ function ProductDetails() {
             <div className="mt-8 flex gap-3">
               <button
                 type="button"
-                onClick={() => addToCart(product)}
+                onClick={() => addToCart(product, quantity)}
                 disabled={isOutOfStock}
                 className="flex flex-1 items-center justify-center gap-2 bg-[#241c18] px-6 py-4 text-sm tracking-wide text-white transition hover:bg-[#3a3029] disabled:cursor-not-allowed disabled:bg-[#b8afa7]"
               >
