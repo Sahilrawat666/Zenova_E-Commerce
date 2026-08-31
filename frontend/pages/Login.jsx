@@ -168,7 +168,7 @@ function Login() {
         </section>
 
         {/* RIGHT AUTH SECTION */}
-        <section className="relative flex w-full items-center justify-center bg-[#f8f5f0] px-5 py-10 sm:px-10 lg:w-1/2 lg:px-12 xl:px-20">
+        <section className="relative flex w-full items-center justify-center bg-[#f8f5f0] px-5 py-7 sm:px-10 lg:w-1/2 lg:px-12 xl:px-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
