@@ -134,7 +134,7 @@ function ProductDetails() {
             <img
               src={product.image_url}
               alt={product.name}
-              className="aspect-[3/4] h-full w-full object-cover"
+              className="aspect-3/4 h-full w-full object-cover"
             />
 
             {product.discount > 0 && (
@@ -247,7 +247,7 @@ function ProductDetails() {
                 type="button"
                 onClick={handleAddToCart}
                 disabled={isOutOfStock || addingToCart}
-                className="flex flex-1 items-center justify-center gap-2 bg-[#241c18] px-6 py-4 text-sm tracking-wide text-white transition hover:bg-[#3a3029] disabled:cursor-not-allowed disabled:bg-[#b8afa7]"
+                className="flex flex-1 items-center justify-center cursor-pointer gap-2 bg-[#241c18] px-6 py-4 text-sm tracking-wide text-white transition hover:bg-[#3a3029] disabled:cursor-not-allowed disabled:bg-[#b8afa7]"
               >
                 {addingToCart ? (
                   <>
@@ -268,7 +268,7 @@ function ProductDetails() {
                 aria-label={
                   productInWishlist ? "Remove from wishlist" : "Add to wishlist"
                 }
-                className={`flex h-14 w-14 items-center justify-center border transition ${
+                className={`flex h-14 w-14 cursor-pointer items-center justify-center border transition ${
                   productInWishlist
                     ? "border-[#b08d57] bg-[#b08d57] text-white"
                     : "border-[#d8d0c8] text-[#302923] hover:border-[#302923]"
