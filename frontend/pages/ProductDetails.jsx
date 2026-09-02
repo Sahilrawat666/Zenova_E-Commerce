@@ -17,6 +17,7 @@ function ProductDetails() {
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
   const [loading, setLoading] = useState(true);
+  const [addingToCart, setAddingToCart] = useState(false);
   const [error, setError] = useState("");
   const { addToCart } = useCart();
   const { isInWishlist, toggleWishlist } = useWishlist();
@@ -52,6 +53,17 @@ function ProductDetails() {
 
   const decreaseQuantity = () => {
     setQuantity((previous) => Math.max(1, previous - 1));
+  };
+
+  // add to cart loader
+  const handleAddToCart = async () => {
+    try {
+      setAddingToCart(true);
+
+      await addToCart(product, quantity);
+    } finally {
+      setAddingToCart(false);
+    }
   };
 
   if (loading) {
@@ -233,12 +245,21 @@ function ProductDetails() {
             <div className="mt-8 flex gap-3">
               <button
                 type="button"
-                onClick={() => addToCart(product, quantity)}
-                disabled={isOutOfStock}
+                onClick={handleAddToCart}
+                disabled={isOutOfStock || addingToCart}
                 className="flex flex-1 items-center justify-center gap-2 bg-[#241c18] px-6 py-4 text-sm tracking-wide text-white transition hover:bg-[#3a3029] disabled:cursor-not-allowed disabled:bg-[#b8afa7]"
               >
-                <FiShoppingBag size={18} />
-                {isOutOfStock ? "Out of Stock" : "Add to Bag"}
+                {addingToCart ? (
+                  <>
+                    <span className="h-5 w-5 animate-spin rounded-full border-2 border-white/30 border-t-white" />
+                    <span>Adding...</span>
+                  </>
+                ) : (
+                  <>
+                    <FiShoppingBag size={18} />
+                    {isOutOfStock ? "Out of Stock" : "Add to Bag"}
+                  </>
+                )}
               </button>
 
               <button
