@@ -290,8 +290,7 @@ function Checkout() {
               <h2 className="text-xl font-medium text-[#302923]">Payment</h2>
 
               <p className="mt-3 text-sm leading-6 text-[#81776e]">
-                Payment integration will be added after the order flow is
-                complete.
+                Select your payment method
               </p>
 
               <div className="mt-5 border border-[#e5ddd4] bg-[#f8f5f0] p-4 text-sm text-[#6f665e]">

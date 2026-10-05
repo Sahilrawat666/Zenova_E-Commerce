@@ -85,7 +85,7 @@ function Hero() {
           transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
           className="relative"
         >
-          <div className="relative mx-auto aspect-[4/5] max-w-[560px] overflow-hidden bg-[#e9e0d6]">
+          <div className="relative mx-auto aspect-4/4   overflow-hidden bg-[#e9e0d6]">
             {/* Replace this URL with your actual product/hero image later */}
             <img
               src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=85"
@@ -94,7 +94,7 @@ function Hero() {
             />
 
             {/* Image overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#241c18]/30 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-[#241c18]/30 via-transparent to-transparent" />
 
             {/* Floating label */}
             <motion.div
@@ -114,7 +114,7 @@ function Hero() {
           </div>
 
           {/* Decorative frame */}
-          <div className="pointer-events-none absolute -bottom-4 -right-4 -z-0 h-full w-full border border-[#b08d57]/30" />
+          <div className="pointer-events-none absolute -bottom-4 -right-4 z-0 h-full w-full border border-[#b08d57]/30" />
 
           {/* Vertical text */}
           <div className="absolute -right-8 top-1/2 hidden -translate-y-1/2 rotate-90 lg:block">

@@ -36,7 +36,7 @@ function Cart() {
       {/* Empty Cart */}
       {cart.length === 0 ? (
         <section className="px-6 py-20 md:px-10 lg:px-16">
-          <div className="mx-auto flex min-h-[400px] max-w-7xl flex-col items-center justify-center text-center">
+          <div className="mx-auto flex min-h-100 max-w-7xl flex-col items-center justify-center text-center">
             <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white text-[#b08d57]">
               <FiShoppingBag size={26} strokeWidth={1.5} />
             </div>

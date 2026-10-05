@@ -106,7 +106,7 @@ function Collections() {
                     className="block"
                   >
                     {/* Image */}
-                    <div className="relative aspect-[4/5] overflow-hidden bg-[#ebe5de]">
+                    <div className="relative aspect-4/5 overflow-hidden bg-[#ebe5de]">
                       <img
                         src={collection.product.image_url}
                         alt={collection.name}
@@ -114,7 +114,7 @@ function Collections() {
                       />
 
                       {/* Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#241c18]/75 via-[#241c18]/10 to-transparent opacity-90" />
+                      <div className="absolute inset-0 bg-linear-to-t from-[#241c18]/75 via-[#241c18]/10 to-transparent opacity-90" />
 
                       {/* Content */}
                       <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-3 md:p-5">
