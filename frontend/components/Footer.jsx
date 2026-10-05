@@ -10,8 +10,8 @@ const footerLinks = {
   Shop: [
     { label: "New Arrivals", href: "/shop?sort=new" },
     { label: "Best Sellers", href: "/shop?sort=popular" },
-    { label: "Women", href: "/shop?category=women" },
-    { label: "Men", href: "/shop?category=men" },
+    { label: "Women", href: "/shop?gender=women" },
+    { label: "Men", href: "/shop?gender=men" },
   ],
   Help: [
     { label: "Contact Us", href: "/contact" },

@@ -21,6 +21,7 @@ const Orders = lazy(() => import("../pages/Orders.jsx"));
 const Account = lazy(() => import("../pages/Account.jsx"));
 const ForgotPassword = lazy(() => import("../pages/ForgotPassword.jsx"));
 const ResetPassword = lazy(() => import("../pages/ResetPassword.jsx"));
+const ComingSoon = lazy(() => import("../pages/ComingSoon.jsx"));
 
 // // Page loading component
 // const PageLoader = () => {
@@ -57,6 +58,7 @@ function App() {
           <Route path="/orders" element={<Orders />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/reset-password/:token" element={<ResetPassword />} />
+          <Route path="*" element={<ComingSoon />} />
 
           {/* Protected routes */}
           <Route element={<ProtectedRoute />}>
